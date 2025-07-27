@@ -1,0 +1,182 @@
+/* start variables */
+:root {
+  --Blue-900-Dark-Mode-Elements: hsl(209, 23%, 22%);
+  --Blue-950-Dark-Mode-Background: hsl(207, 26%, 17%);
+  --Grey-950-Light-Mode-Text: hsl(200, 15%, 8%);
+  --Grey-400-Light-Mode-Input: hsl(0, 0%, 50%);
+  --Grey-50-Light-Mode-Background: hsl(0, 0%, 99%);
+  --White-Dark-Mode-Text-Light-Mode-Elements: hsl(0, 100%, 100%);
+  --light-box-shadow: #eee 0px 0px 10px 1px;
+}
+/* end variables */
+.page-container .search-and-filter {
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .page-container .search-and-filter {
+    flex-direction: column;
+  }
+}
+.page-container .search,
+.page-container .filter .filter-button {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--light-box-shadow);
+  text-transform: capitalize;
+}
+.dark .page-container .search,
+.dark .page-container .filter .filter-button {
+  background-color: var(--Blue-900-Dark-Mode-Elements);
+  box-shadow: none;
+}
+.page-container .search {
+  width: 35%;
+}
+@media (max-width: 991px) {
+  .page-container .search {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .page-container .search {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.page-container .search .search-icon {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+.page-container .search .search-icon img {
+  width: 20px;
+  height: 20px;
+}
+.page-container .search input {
+  background-color: transparent;
+  flex: 1;
+  padding: 10px;
+  border: none;
+  caret-color: var(--Grey-400-Light-Mode-Input);
+}
+.dark .page-container .search input {
+  color: white;
+}
+.page-container .search::-webkit-search-cancel-button {
+  color: var(--Grey-400-Light-Mode-Input);
+}
+.page-container .search input:focus {
+  outline: none;
+}
+.page-container .search input::placeholder {
+  color: var(--Grey-400-Light-Mode-Input);
+  transition: 0.3s opacity;
+}
+.page-container .search input:focus::placeholder {
+  opacity: 0;
+}
+.dark .page-container .search input::placeholder {
+  color: white;
+}
+.page-container .filter {
+  font-size: 15px;
+}
+.page-container .filter .filter-button {
+  width: 160px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.page-container .filter .filter-button > div {
+  width: 120px;
+  cursor: pointer;
+}
+.page-container .filter .filter-button button {
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+}
+.page-container .filter .filter-button button img {
+  width: 20px;
+}
+.page-container .filter .filter-list {
+  width: 160px;
+  background-color: white;
+  z-index: 2;
+  border-radius: 6px;
+}
+.dark .page-container .filter .filter-list {
+  background-color: var(--Blue-900-Dark-Mode-Elements);
+}
+.page-container .filter .filter-list li button {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 15px;
+  transition: 0.3s background-color;
+  text-align: left;
+}
+.dark .page-container .filter .filter-list li button {
+  color: white;
+}
+.page-container .filter .filter-list li:hover {
+  background-color: var(--Grey-50-Light-Mode-Background);
+}
+.dark .page-container .filter .filter-list li:hover {
+  background-color: var(--Blue-950-Dark-Mode-Background);
+}
+.countries-container {
+  grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+  gap: 25px;
+}
+@media (max-width: 776px) {
+  .countries-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+.countries-container .card {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.3s transform;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+}
+.dark .countries-container .card {
+  background-color: var(--Blue-900-Dark-Mode-Elements);
+  box-shadow: none;
+}
+.countries-container .card:hover {
+  transform: translateY(-10px);
+}
+.countries-container .card .flag-img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.countries-container .card .flag-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.countries-container .card .country-info {
+  padding: 20px 20px 50px;
+  font-size: 14px;
+}
+.countries-container .card .country-name {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.countries-container .card .country-info > div > div:last-child {
+  color: var(--Grey-400-Light-Mode-Input);
+  margin-left: 10px;
+}
+.dark .countries-container .card .country-info > div > div:last-child {
+  color: #bbb;
+}

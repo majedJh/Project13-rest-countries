@@ -1,0 +1,112 @@
+/* start variables */
+:root {
+  --Blue-900-Dark-Mode-Elements: hsl(209, 23%, 22%);
+  --Blue-950-Dark-Mode-Background: hsl(207, 26%, 17%);
+  --Grey-950-Light-Mode-Text: hsl(200, 15%, 8%);
+  --Grey-400-Light-Mode-Input: hsl(0, 0%, 50%);
+  --Grey-50-Light-Mode-Background: hsl(0, 0%, 99%);
+  --White-Dark-Mode-Text-Light-Mode-Elements: hsl(0, 100%, 100%);
+  --box-shadow: #eee 0px 0px 10px 1px;
+}
+body {
+    overflow-y: hidden;
+}
+/* end variables */
+@media (min-width: 992px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 630px) {
+  .container {
+    width: 100%;
+  }
+}
+.page-container {
+  padding-bottom: 0;
+}
+.back-button {
+  margin-top: -10px;
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 30px;
+  box-shadow: #ccc 0px 0px 4px 1px;
+  margin-bottom: 30px;
+}
+.dark .back-button {
+  color: white;
+  background-color: var(--Blue-900-Dark-Mode-Elements);
+  box-shadow: none;
+}
+.back-button img {
+  margin-right: 5px;
+}
+@media (max-width: 767px) {
+  .country {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+.flag-image {
+  border: 1px solid #eee;
+  width: calc(50% - 30px);
+  max-width: 400px;
+  height: fit-content;
+}
+.dark .flag-image {
+  border-color: #555;
+}
+.flag-image img {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .flag-image {
+    width: 85%;
+    align-self: center;
+  }
+}
+.country-info {
+  width: 50%;
+  max-width: 600px;
+  margin-left: 30px;
+}
+@media (max-width: 667px) {
+    .country-info {
+        margin-left: 0;
+    }
+}
+.country-info h3 {
+  margin-top: 30px;
+  font-size: 20px;
+  width: 100%;
+}
+.country-info .full-data-box {
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.country-info .data-pt2 {
+  margin-left: 30px;
+}
+@media (max-width: 767px) {
+  .country-info .full-data-box {
+    flex-direction: column;
+  }
+  .country-info .data.pt1 {
+    margin-bottom: 10px;
+  }
+}
+.country-info .full-data-box .data > li {
+  cursor: auto;
+  margin-bottom: 10px;
+}
+.country-info .full-data-box > .data > li > div:first-child {
+  margin-right: 5px;
+  text-wrap: nowrap;
+}
+.country-info .full-data-box > .data > li > div:last-child {
+  color: var(--Grey-400-Light-Mode-Input);
+}
+.dark .country-info .full-data-box > .data > li > div:last-child {
+  color: #bbb;
+}

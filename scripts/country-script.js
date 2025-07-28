@@ -33,11 +33,6 @@ btns.backBtn.addEventListener("keydown", e => {
     }
 })
 btns.colorThemeBtn.addEventListener("click", toggleColorTheme);
-btns.colorThemeBtn.addEventListener("keydown", event => {
-    if (event.code == "Enter") {
-        toggleColorTheme();
-    }
-})
 //end main
 
 function domFillData(data) {
@@ -74,8 +69,11 @@ function domFillData(data) {
     //currencies
     let currenciesList = Object.values(data.currencies);
     let currenices = currenciesList[0].name;
-    for (let i = 1; i < currenciesList.length; i++) {
-        currenices += `, ${nativeNamesList[i].name}`
+    if (!currenciesList) currenciesList = "-";
+    else {
+        for (let i = 1; i < currenciesList.length; i++) {
+            currenices += `, ${currenciesList[i].name}`
+        }
     }
     elements.currenices.innerText = currenices;
 

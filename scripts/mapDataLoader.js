@@ -34,15 +34,6 @@ async function fetchData(link) {
         clearTimeout(timeout);
     }
 }
-export function formatPopulation(countryPopulation) {
-    const populationStrTemp = `${countryPopulation}`.split("").reverse().join("");
-    let population = ``;
-    for (let i = 0; i < populationStrTemp.length; i++) {
-        if (i > 0 && i % 3 == 0) {
-            population += `,${populationStrTemp[i]}`;
-            continue;
-        }
-        population += populationStrTemp[i];
-    }
-    return population.split("").reverse().join("");
+export function formatPopulation(num) {
+  return new Intl.NumberFormat().format(num);
 }

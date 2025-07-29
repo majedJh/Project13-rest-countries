@@ -58,6 +58,9 @@ Users should be able to:
 
 First time dealing whith modules (import export), and moving between two pages.I learnt a lot about window.location and how to manipulate the url, especially URLSearchParams.Used lazy load to load small batches of the countries. The best thing was fetching the API only once in all this proccess. I also used window.matchmedia to get the user's OS color scheme to first decide the color scheme, then stored the prefered color scheme in the localstorage
 
+*Update*: learnt about INTL.numberformat for better formation of the numbers than the static step-by-step I did earlier 
+
+
 ### Continued development
 
 I'd like to implement more searching features and more sorting for the countries.
